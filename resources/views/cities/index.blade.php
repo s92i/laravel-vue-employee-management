@@ -46,7 +46,7 @@
                         @foreach ($cities as $city)
                             <tr>
                                 <th scope="row">{{ $city->id }}</th>
-                                <td>{{ $city->state->name }}</td>
+                                <td>{{ $city->state->name ?? 'None' }}</td>
                                 <td>{{ $city->name }}</td>
                                 <td>
                                     <a href="{{ route('cities.edit', $city->id) }}" class="btn btn-success">Edit</a>
